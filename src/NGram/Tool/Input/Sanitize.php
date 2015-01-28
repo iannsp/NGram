@@ -3,9 +3,16 @@ namespace Ngram\Tool\Input;
 
 class Sanitize
 {
-    const PONCTUATION = "#[[:punct:]]#";
+    const PONCTUATION = 0;
+    private static $regex = [
+        ["#[[:punct:]]#","/\*/","#[[:blank:]]#","/\	{1,}/","/\ {2,}/","/\t/"]
+    ];
     public static function get($input,array $preset=null)
     {
-        return preg_replace($preset['by'], " ", $input);
+        $regex = SELF::$regex[$preset['by']];
+        foreach ($regex as $expr){
+            $input = preg_replace($expr, " ", $input);
+        }
+        return $input;
     }
 }

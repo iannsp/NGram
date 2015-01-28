@@ -4,7 +4,7 @@ namespace Ngram\Tool\Input;
 class SanitizeTest extends \PHPUnit_Framework_TestCase
 {
     
-    public function testSplitByCr()
+    public function testSanitizeSimple()
     {
         $text = 
             "?Primeiro, !!!!paragrafo.
@@ -16,6 +16,49 @@ class SanitizeTest extends \PHPUnit_Framework_TestCase
         terceiro ";
         $r = Sanitize::get($text, ['by'=>Sanitize::PONCTUATION]);
         $this->assertEquals($expected, $r);
-//        var_dump($r);
     }
+    
+    public function testSanitizeTextFromHtml()
+    {
+        $text = " Brasil http://noticias.terra.com.br/brasil/ 
+
+HADDAD ANUNCIA PROJETO PARA PUNIR ABUSO DE ÁGUA EM SÃO PAULO
+
+PREFEITO PAULISTANO DISSE TAMBÉM QUE SE SURPREENDEU COM O ANÚNCIO DE
+RODÍZIO, FEITO PELA SABESP, NESTA TERÇA-FEIRA
+
+ 28 Jan 2015 
+ 15h33 
+
+ 	* 
+ 	* 
+ 	* 
+ 	* 
+ 	* 
+ 	* 6
+ 	* comentários
+
+ ";
+     $r = Sanitize::get($text, ['by'=>Sanitize::PONCTUATION]);
+     $this->assertEquals(" Brasil http noticias terra com br brasil 
+
+HADDAD ANUNCIA PROJETO PARA PUNIR ABUSO DE ÁGUA EM SÃO PAULO
+
+PREFEITO PAULISTANO DISSE TAMBÉM QUE SE SURPREENDEU COM O ANÚNCIO DE
+RODÍZIO FEITO PELA SABESP NESTA TERÇA FEIRA
+
+ 28 Jan 2015 
+ 15h33 
+
+ 
+ 
+ 
+ 
+ 
+ 6
+ comentários
+
+ ", $r);
+    }
+    
 }
