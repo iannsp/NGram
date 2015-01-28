@@ -1,5 +1,5 @@
 <?php
-namespace Ngram\Tool\Input;
+namespace  Iannsp\NGram\Tool\Input;
 
 class SanitizeTest extends \PHPUnit_Framework_TestCase
 {

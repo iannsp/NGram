@@ -1,5 +1,5 @@
 <?php
-namespace Ngram\Tool\Input;
+namespace  Iannsp\NGram\Tool\Input;
 
 class TextToArrayTest extends \PHPUnit_Framework_TestCase
 {

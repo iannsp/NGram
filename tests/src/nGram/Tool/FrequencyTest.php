@@ -1,5 +1,5 @@
 <?php
-namespace NGram\Tool\NGram;
+namespace  Iannsp\NGram\Tool\NGram;
 use NGram\Frequency\Word;
 class FrequencyTest extends \PHPUnit_Framework_TestCase
 {

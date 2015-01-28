@@ -15,6 +15,6 @@
         "html2text/html2text": "*"
     },
     "autoload": {
-        "psr-0": {"": "src/"}
+        "psr-4": {"Iannsp\\": "src/"}
     }
 }

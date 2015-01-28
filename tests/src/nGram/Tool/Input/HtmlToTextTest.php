@@ -1,5 +1,5 @@
 <?php
-namespace Ngram\Tool\Input;
+namespace  Iannsp\NGram\Tool\Input;
 
 class HtmlToTextTest extends \PHPUnit_Framework_TestCase
 {

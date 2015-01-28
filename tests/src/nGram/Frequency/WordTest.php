@@ -1,5 +1,5 @@
 <?php
-namespace NGram\Frequency;
+namespace  Iannsp\NGram\Frequency;
 
 class FrequencyTest extends \PHPUnit_Framework_TestCase
 {
