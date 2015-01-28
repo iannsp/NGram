@@ -12,7 +12,7 @@
         }
     ],
     "require": {
-        "html2text/html2text": "~2.0"
+        "html2text/html2text": "*"
     },
     "autoload": {
         "psr-0": {"": "src/"}
