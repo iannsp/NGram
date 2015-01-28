@@ -11,7 +11,9 @@
             "email": "iannsp@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "html2text/html2text": "~2.0"
+    },
     "autoload": {
         "psr-0": {"": "src/"}
     }

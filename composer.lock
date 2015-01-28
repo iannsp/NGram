@@ -4,8 +4,42 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "43b08e049156e9e064266a6623ac817a",
-    "packages": [],
+    "hash": "65eec4ebc9233f06ab3d31fed120d730",
+    "packages": [
+        {
+            "name": "html2text/html2text",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mtibben/html2text.git",
+                "reference": "fc9589518a1b2241b88210839a945ad088840122"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mtibben/html2text/zipball/fc9589518a1b2241b88210839a945ad088840122",
+                "reference": "fc9589518a1b2241b88210839a945ad088840122",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Html2Text\\": [
+                        "src/",
+                        "test/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv2"
+            ],
+            "description": "Converts HTML to formatted plain text",
+            "time": "2014-10-18 05:42:57"
+        }
+    ],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
