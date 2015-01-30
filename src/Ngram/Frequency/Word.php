@@ -22,15 +22,14 @@ class Word implements Frequency
         }
 
         if ($by == $size){
-            array_push($result,  $this->unigram);
-            return $result;
+            return implode(" ",$this->unigram);
         }
 
         $range = range(0, $size , $by);
         for ($i=0; $i<= $size; $i++){
             $slice = array_slice($this->unigram, $i, $by);
             if (count($slice)==$by)
-                array_push($result,  $slice);
+                array_push($result,  implode(" ",$slice));
         }
         return $result;   
     }

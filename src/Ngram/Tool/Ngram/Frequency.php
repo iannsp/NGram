@@ -12,7 +12,7 @@ class Frequency implements Tool
         $result =  array_count_values($strings);
         $count = [];
         foreach($result as $nGramString=> $k){
-            $count[]=[ $nGramString,'count'=>$k];
+            $count[$nGramString]=$k;
         }
         return $count;
     }

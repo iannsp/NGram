@@ -39,7 +39,7 @@ class Letter implements Frequency
         for ($i=0; $i<= $size; $i++){
             $slice = array_slice($this->unigram, $i, $by);
             if (count($slice)==$by)
-                array_push($result,  $slice);
+                array_push($result,  implode(" ",$slice));
         }
         return $result;   
     }
