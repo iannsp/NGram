@@ -20,9 +20,8 @@ class Word implements Frequency
         if ($by > $size){
             return [];
         }
-
         if ($by == $size){
-            return implode(" ",$this->unigram);
+            return [implode(" ",$this->unigram)];
         }
 
         $range = range(0, $size , $by);

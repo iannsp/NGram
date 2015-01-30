@@ -3,6 +3,12 @@ namespace  Ngram\Frequency;
 
 class FrequencyTest extends \PHPUnit_Framework_TestCase
 {
+
+    public function testWordFrequencyOneItem()
+    {
+        $w = new Word("Ivo viu");
+        $this->assertEquals(['Ivo viu'], $w->extract(2));
+    }
  
     public function testWordFrequency()
     {
@@ -10,7 +16,7 @@ class FrequencyTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(['Ivo','viu', 'a', 'Uva'], $w->extract(1));
         $this->assertEquals(['Ivo viu', 'viu a', 'a Uva'], $w->extract(2));
         $this->assertEquals(['Ivo viu a', 'viu a Uva'], $w->extract(3));
-        $this->assertEquals('Ivo viu a Uva', $w->extract(4));
+        $this->assertEquals(['Ivo viu a Uva'], $w->extract(4));
         $this->assertEquals([], $w->extract(5));
     }
     public function testLetterFrequency()
