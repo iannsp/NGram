@@ -1,5 +1,5 @@
 <?php
-namespace Iannsp\NGram;
+namespace Ngram;
 class SizeTest extends \PHPUnit_Framework_TestCase
 {
     public function testNavigateOverSizes()

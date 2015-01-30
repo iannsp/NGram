@@ -1,5 +1,5 @@
 <?php
-namespace  Iannsp\NGram\Tool\NGram;
+namespace  Ngram\Tool\Ngram;
 use NGram\Frequency\Word;
 class CounterTest extends \PHPUnit_Framework_TestCase
 {

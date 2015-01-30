@@ -1,5 +1,5 @@
 <?php
-namespace  Iannsp\NGram\Tool\NGram;
+namespace  Ngram\Tool\Ngram;
 
 interface Tool
 {

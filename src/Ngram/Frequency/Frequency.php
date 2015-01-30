@@ -1,5 +1,5 @@
 <?php
-namespace Iannsp\NGram\Frequency;
+namespace Ngram\Frequency;
 
 interface Frequency{
     public function __construct($data);

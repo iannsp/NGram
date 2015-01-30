@@ -1,5 +1,5 @@
 <?php
-namespace Iannsp\NGram;
+namespace Ngram;
 
 class NGram
 {

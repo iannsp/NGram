@@ -1,5 +1,5 @@
 <?php
-namespace  Iannsp\NGram\Tool\NGram;
+namespace  Ngram\Tool\Ngram;
 
 class Frequency implements Tool
 {

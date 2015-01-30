@@ -1,5 +1,5 @@
 <?php
-namespace  Iannsp\NGram\Frequency;
+namespace  Ngram\Frequency;
 
 
 class Factory

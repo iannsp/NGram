@@ -1,5 +1,5 @@
 <?php
-namespace Iannsp\Ngram\Tool\Input;
+namespace Ngram\Tool\Input;
 
 class TextToArray
 {

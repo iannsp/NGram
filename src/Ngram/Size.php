@@ -1,5 +1,5 @@
 <?php
-namespace Iannsp\NGram;
+namespace Ngram;
 /*
 This class expose the definition of term Size into N-gram domain
 */
