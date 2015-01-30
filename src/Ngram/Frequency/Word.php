@@ -1,17 +1,19 @@
 <?php
 namespace  Ngram\Frequency;
-
+use Ngram\Tool\Input\BlackList;
 class Word implements Frequency
 {
     private $data;
     private $unigram = [];
-    public function __construct($data)
+    private $blacklist;
+    public function __construct($data, array $blacklist=[])
     {
         if (is_null($data) || empty($data)){
             throw new \Exception("No data, no n-gram.");
         }
         $this->data = $data;
-        $this->unigram = explode(" ",$data);
+        $this->unigram = BlackList::get( explode(" ",$data), ['words'=>$blacklist]);
+        
     }
     public function extract($by)
     {

@@ -5,10 +5,13 @@ class BlackList
 {
     public static function get($input,array $preset=null)
     {
+        $result = [];
         $blacklist = $preset['words'];
-        foreach ($blacklist as $word){
-            $input = str_replace(" {$word}", "", $input);
+        foreach ($input as $word){
+            if (in_array($word, $blacklist))
+                continue;
+            $result[] =$word;
         }
-        return $input;
+        return $result;
     }
 }
