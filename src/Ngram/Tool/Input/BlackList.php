@@ -7,7 +7,7 @@ class BlackList
     {
         $blacklist = $preset['words'];
         foreach ($blacklist as $word){
-            $input = str_replace($word, "", $input);
+            $input = str_replace(" {$word}", "", $input);
         }
         return $input;
     }

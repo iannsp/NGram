@@ -8,7 +8,7 @@ class BlackListTest extends \PHPUnit_Framework_TestCase
     {
         $input = "Ivo viu a Uva";
         $blacklist = ["viu","Uva"];
-        $expected = "Ivo  a ";
+        $expected = "Ivo  a";
         $result = BlackList::get($input, ['words'=>$blacklist]);
         $this->assertEquals($expected,$result);
     }
