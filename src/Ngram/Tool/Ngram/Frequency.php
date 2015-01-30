@@ -7,12 +7,12 @@ class Frequency implements Tool
     {
         $strings = [];
         foreach ($ngram as $idx => $gram){
-            $strings[$idx] = serialize($gram);
+            $strings[$idx] = implode(" ",$gram);
         }
         $result =  array_count_values($strings);
         $count = [];
         foreach($result as $nGramString=> $k){
-            $count[]=[ unserialize($nGramString),'count'=>$k];
+            $count[]=[ $nGramString,'count'=>$k];
         }
         return $count;
     }

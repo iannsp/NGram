@@ -7,8 +7,8 @@ class FrequencyTest extends \PHPUnit_Framework_TestCase
     {
         $data = [['Ivo'],['viu'],['Ivo']];
         $expected = [
-            [['Ivo'],'count'=>2],
-            [['viu'],'count'=>1]
+            ['Ivo','count'=>2],
+            ['viu','count'=>1]
         ];
         $this->assertEquals($expected, Frequency::get($data));
     }
