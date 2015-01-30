@@ -1,5 +1,5 @@
 {
-    "name": "iannsp/ngram",
+    "name": "iannsp/Ngram",
     "description": "A n-gram toolset.",
     "require-dev": {
         "phpunit/phpunit": "~4.4"
