@@ -58,5 +58,12 @@ RODÍZIO FEITO PELA SABESP NESTA TERÇA FEIRA
  6
  comentários", $r);
     }
-    
+    public function testUrlSanitizer()
+    {
+        $txts = ['[http://esporte.uol.com.br/futebol/times/internacional/]','[http://click.uol.com.br/?rf=home2011-box-assine&u=http://clicklogger.rm.uol.com.br/?prd=11&grp=src:13;chn:0;creative:linkfixo_home2014_0800_esq;thm:assine&msr=Cliques%20de%20Origem:1&oper=11&redir=http://assine.uol.com.br/]'];
+        foreach ($txts as $txt){
+            $r = Sanitize::get($txt, ['by'=>Sanitize::PONCTUATION]);
+            $this->assertEquals("",$r);
+        }
+    }
 }
