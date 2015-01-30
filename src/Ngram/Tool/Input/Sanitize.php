@@ -13,6 +13,6 @@ class Sanitize
         foreach ($regex as $expr){
             $input = preg_replace($expr, " ", $input);
         }
-        return $input;
+        return trim($input);
     }
 }
