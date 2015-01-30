@@ -5,7 +5,7 @@ class Sanitize
 {
     const PONCTUATION = 0;
     private static $regex = [
-        ["#[[:punct:]]#","/\*/","#[[:blank:]]#","/\	{1,}/","/\ {2,}/","/\t/"]
+        ['|https?://[a-z\.0-9]+|i',"#[[:punct:]]#","/\*/","#[[:blank:]]#","/\	{1,}/","/\ {2,}/","/\t/"]
     ];
     public static function get($input,array $preset=null)
     {
