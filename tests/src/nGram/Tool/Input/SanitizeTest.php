@@ -11,16 +11,16 @@ class SanitizeTest extends \PHPUnit_Framework_TestCase
             _ -segundo [paragrado.Tem mais no paragrafo.
         terceiro;";
         $expected =             
-" Primeiro      paragrafo 
-               segundo  paragrado Tem mais no paragrafo 
-        terceiro ";
+" Primeiro paragrafo 
+ segundo paragrado Tem mais no paragrafo 
+ terceiro ";
         $r = Sanitize::get($text, ['by'=>Sanitize::PONCTUATION]);
         $this->assertEquals($expected, $r);
     }
     
     public function testSanitizeTextFromHtml()
     {
-        $text = " Brasil http://noticias.terra.com.br/brasil/ 
+        $text = " Brasil   
 
 HADDAD ANUNCIA PROJETO PARA PUNIR ABUSO DE ÁGUA EM SÃO PAULO
 
@@ -40,7 +40,7 @@ RODÍZIO, FEITO PELA SABESP, NESTA TERÇA-FEIRA
 
  ";
      $r = Sanitize::get($text, ['by'=>Sanitize::PONCTUATION]);
-     $this->assertEquals(" Brasil http noticias terra com br brasil 
+     $this->assertEquals(" Brasil 
 
 HADDAD ANUNCIA PROJETO PARA PUNIR ABUSO DE ÁGUA EM SÃO PAULO
 
