@@ -66,4 +66,14 @@ RODÍZIO FEITO PELA SABESP NESTA TERÇA FEIRA
             $this->assertEquals("",$r);
         }
     }
+    
+    public function testNormalizeToUp()
+    {
+        $txts = ['lá É o batman Î Í ÇÃ'];
+        foreach ($txts as $txt){
+            $r = Sanitize::get($txt, ['by'=>Sanitize::PONCTUATION,'normalize'=>Sanitize::NORMALIZETOLOWER]);
+            $this->assertEquals('lá é o batman î í çã',$r);
+        }
+        
+    }
 }
