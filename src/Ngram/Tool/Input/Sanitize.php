@@ -5,7 +5,7 @@ class Sanitize
 {
     const PONCTUATION = 0;
     private static $regex = [
-        ['|https?://[a-z\.0-9]+|i',"#[[:punct:]]#","/\*/","#[[:blank:]]#","/\	{1,}/","/\ {2,}/","/\t/"]
+        ['/(\b(?:(?:https?|ftp|file|[A-Za-z]+):\/\/|www\.|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$]))/i',"#[[:punct:]]#","/\*/","#[[:blank:]]#","/\	{1,}/","/\ {2,}/","/\t/"]
     ];
     public static function get($input,array $preset=null)
     {
