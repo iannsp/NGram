@@ -1,20 +1,28 @@
 {
-    "name": "iannsp/Ngram",
-    "description": "A n-gram toolset.",
-    "require-dev": {
-        "phpunit/phpunit": "~4.4"
-    },
-    "license": "GPL-3.0+",
-    "authors": [
-        {
-            "name": "Ivo Nascimento",
-            "email": "iannsp@gmail.com"
-        }
-    ],
-    "require": {
-        "html2text/html2text": "*"
-    },
-    "autoload": {
-        "psr-4": {"Ngram\\": "src/Ngram/"}
-    }
+	"name": "iannsp/ngram",
+	"description": "A n-gram toolset.",
+	"license": "GPL-3.0+",
+	"authors": [
+		{
+			"name": "Ivo Nascimento",
+			"email": "iannsp@gmail.com",
+			"role": "Author"
+		}
+	],
+	"require": {
+		"php": ">=5.4",
+		"html2text/html2text": "~2.0.1"
+	},
+	"autoload": {
+		"psr-4": {"Ngram\\": "src/Ngram/"}
+	},
+	"require-dev": {
+		"phpunit/phpunit": "~4.4"
+	},
+	"autoload-dev": {
+		"psr-4": {"Ngram\\": "tests/Ngram/"}
+	},
+	"scripts": {
+		"test": "phpunit --verbose"
+	}
 }

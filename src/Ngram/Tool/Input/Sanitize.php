@@ -11,7 +11,7 @@ class Sanitize
     ];
     public static function get($input,array $preset=null)
     {
-        $regex = SELF::$regex[$preset['by']];
+        $regex = self::$regex[$preset['by']];
         foreach ($regex as $expr){
             if (isset($preset['normalize']))
                 $input = $preset['normalize']($input,'UTF-8');
